@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+:root {
+  --color-primary-blue: hsl(233, 26%, 24%);
+  --color-secondary-blue: hsl(233, 8%, 62%);
+  --color-secondary-liteblue: hsl(220, 16%, 96%)
+  --color-primary-limegreen: hsl(136, 65%, 51%);
+  --color-primary-cayn: hsl(192, 70%, 51%);
+  --color-gray: hsl(0, 0%, 98%)
+  --color-white : hsl(0, 0%, 98%)
+
+  ul {
+    list-style: none;
+    padding: none;
+    margin: none;
+  }
+}
+
+html {
+  height: 100vh;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+  line-height: 1.6;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+#app {
+  min-height: 100%;
+  margin: 0 auto;
+  font-weight: normal;
+}
