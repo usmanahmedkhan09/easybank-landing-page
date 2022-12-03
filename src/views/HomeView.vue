@@ -1,9 +1,10 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
+<template></template>
+<script lang="ts">
+import { defineComponent } from "vue";
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>
+export default defineComponent({
+  setup() {
+    return {};
+  },
+});
+</script>
