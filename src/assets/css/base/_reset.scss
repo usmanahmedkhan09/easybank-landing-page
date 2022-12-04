@@ -8,6 +8,11 @@
   --color-primary-cayn: hsl(192, 70%, 51%);
   --color-gray: hsl(0, 0%, 98%);
   --color-white: hsl(0, 0%, 98%);
+  --primary-background-color: linear-gradient(
+    90deg,
+    var(--color-primary-limegreen) 10%,
+    var(--color-primary-cayn) 50%
+  );
 }
 
 html {

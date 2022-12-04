@@ -20,6 +20,21 @@
         padding: unset;
         margin: 0px 16px;
         color: var(--color-secondary-blue);
+        position: relative;
+
+        &:hover {
+          color: var(--color-black);
+          &::before {
+            content: " ";
+            height: 3px;
+            width: -webkit-fill-available;
+            position: absolute;
+            background: var(--primary-background-color);
+            bottom: -12px;
+            margin: auto;
+            border-radius: 10px;
+          }
+        }
       }
     }
   }

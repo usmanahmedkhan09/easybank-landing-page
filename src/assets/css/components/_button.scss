@@ -4,11 +4,7 @@
   min-width: 170px;
   border: unset;
   outline: unset;
-  background-image: linear-gradient(
-    90deg,
-    var(--color-primary-limegreen) 10%,
-    var(--color-primary-cayn) 50%
-  );
+  background-image: var(--primary-background-color);
   border-radius: 30px;
   color: var(--color-white);
   font-size: 1.6rem;

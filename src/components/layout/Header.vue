@@ -12,9 +12,7 @@
         <li>Careers</li>
       </ul>
     </nav>
-    <div class="button_wrapper">
-      <button class="btn">Request Invite</button>
-    </div>
+    <button class="btn">Request Invite</button>
   </header>
 </template>
 <script lang="ts">
