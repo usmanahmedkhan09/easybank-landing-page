@@ -1,0 +1,11 @@
+$breakpoints: (
+  mobile: "368px",
+  tablet: "768px",
+  desktop: "1240",
+);
+
+@mixin mq($width, $value) {
+  @media screen and ($width: map.get($value)) {
+    @content;
+  }
+}

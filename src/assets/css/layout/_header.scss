@@ -1,0 +1,26 @@
+.header {
+  padding: 48px 92px;
+  max-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo_wrapper {
+    .logoIcon {
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      li {
+        padding: unset;
+        margin: 0px 16px;
+        color: var(--color-secondary-blue);
+      }
+    }
+  }
+}
