@@ -1,14 +1,10 @@
+@use "../base/" as *;
 .header {
   padding: 48px 92px;
   max-height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  .logo_wrapper {
-    .logoIcon {
-    }
-  }
 
   nav {
     ul {
@@ -36,6 +32,25 @@
           }
         }
       }
+    }
+  }
+
+  .menuIcon {
+    display: none;
+  }
+
+  /****  media quires relted to mobiles **/
+  @include respond-to("small") {
+    padding: 24px 16px;
+    nav {
+      display: none;
+    }
+    button {
+      display: none;
+    }
+    .menuIcon {
+      display: block;
+      align-self: end;
     }
   }
 }

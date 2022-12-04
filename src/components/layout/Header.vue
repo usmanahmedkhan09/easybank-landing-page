@@ -13,14 +13,16 @@
       </ul>
     </nav>
     <button class="btn">Request Invite</button>
+    <MenuIcon class="menuIcon" />
   </header>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
 import logoIconVue from "../icons/logoIcon.vue";
+import MenuIcon from "../icons/hamburgerIcon.vue";
 
 export default defineComponent({
-  components: { logoIconVue },
+  components: { logoIconVue, MenuIcon },
   setup() {
     return {};
   },

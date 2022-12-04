@@ -1,11 +1,30 @@
+@use "sass:map";
 $breakpoints: (
-  mobile: "368px",
-  tablet: "768px",
-  desktop: "1240",
+  "small": (
+    max-width: 800px,
+  ),
+  "medium": (
+    max-width: 1024px,
+  ),
+  "large": (
+    max-width: 1200px,
+  ),
 );
 
-@mixin mq($width, $value) {
-  @media screen and ($width: map.get($value)) {
-    @content;
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == "string",
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media screen and #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for breakpoint';
   }
 }
