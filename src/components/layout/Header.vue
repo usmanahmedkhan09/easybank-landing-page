@@ -13,18 +13,29 @@
       </ul>
     </nav>
     <button class="btn">Request Invite</button>
-    <MenuIcon class="menuIcon" />
+    <MenuIcon
+      v-if="!showSidebar"
+      @click="showSidebar = true"
+      class="menuIcon"
+    />
+    <CloseIcon v-else @click="showSidebar = false" class="menuIcon" />
   </header>
+  <SidebarVue class="sidebar" v-if="showSidebar" />
 </template>
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 import logoIconVue from "../icons/logoIcon.vue";
 import MenuIcon from "../icons/hamburgerIcon.vue";
+import SidebarVue from "./Sidebar.vue";
+import CloseIcon from "../icons/closeIcon.vue";
 
 export default defineComponent({
-  components: { logoIconVue, MenuIcon },
+  components: { logoIconVue, MenuIcon, SidebarVue, CloseIcon },
   setup() {
-    return {};
+    const showSidebar = ref(false);
+    return {
+      showSidebar,
+    };
   },
 });
 </script>
