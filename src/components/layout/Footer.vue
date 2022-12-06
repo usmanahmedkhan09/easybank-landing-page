@@ -10,6 +10,20 @@
         <IconPrinterest />
       </div>
     </div>
+    <ul role="list">
+      <li>About Us</li>
+      <li>Contact</li>
+      <li>Blog</li>
+    </ul>
+    <ul role="list">
+      <li>Careers</li>
+      <li>Support</li>
+      <li>Privacy Policy</li>
+    </ul>
+    <div class="button_wrapper">
+      <div class="btn">Request Invite</div>
+      <p class="rights">EasyBank.All Rights Reserved</p>
+    </div>
   </footer>
 </template>
 <script lang="ts">

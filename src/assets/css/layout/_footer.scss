@@ -1,16 +1,17 @@
 .footer {
   min-height: 200px;
   background-color: var(--color-primary-blue);
-  padding: 32px 0px;
-  padding-left: 92px;
+  padding: 32px 92px 32px 92px;
   display: flex;
-  //   justify-content: center;
+  //   justify-content: space-between;
   align-items: space-between;
+  //   gap: 62px;
 
   .logo_wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex: 20%;
     .logo {
       path[role="svg"] {
         fill: white;
@@ -28,6 +29,33 @@
           }
         }
       }
+    }
+  }
+
+  ul {
+    flex: 20%;
+    li {
+      color: var(--color-gray);
+      font-size: 1.6rem;
+      margin: 10px 0px;
+      &:hover {
+        color: var(--color-primary-limegreen);
+      }
+    }
+  }
+
+  .button_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    min-width: 30%;
+    flex: 40%;
+    // text-align: right;
+    .rights {
+      margin: 24px 0px;
+      color: var(--color-secondary-blue);
+      font-size: 1.4rem;
     }
   }
 }
