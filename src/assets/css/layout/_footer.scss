@@ -1,0 +1,33 @@
+.footer {
+  min-height: 200px;
+  background-color: var(--color-primary-blue);
+  padding: 32px 0px;
+  padding-left: 92px;
+  display: flex;
+  //   justify-content: center;
+  align-items: space-between;
+
+  .logo_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .logo {
+      path[role="svg"] {
+        fill: white;
+      }
+    }
+
+    .social-icons {
+      svg:not(:first-child) {
+        margin-left: 10px;
+      }
+      svg {
+        &:hover {
+          path {
+            fill: var(--color-primary-limegreen);
+          }
+        }
+      }
+    }
+  }
+}
