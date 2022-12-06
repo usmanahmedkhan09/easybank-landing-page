@@ -14,14 +14,16 @@
       </div>
     </div>
     <onboardingVue />
+    <articlesVue />
   </main>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
 import onboardingVue from "./reuseable/onboarding.vue";
+import articlesVue from "./reuseable/articles.vue";
 
 export default defineComponent({
-  components: { onboardingVue },
+  components: { onboardingVue, articlesVue },
   setup() {
     return {};
   },
