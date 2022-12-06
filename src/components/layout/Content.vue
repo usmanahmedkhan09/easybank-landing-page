@@ -1,6 +1,6 @@
 <template>
   <main class="content">
-    <div class="content--header">
+    <div class="content--intro">
       <div class="details">
         <h1>Next generation digital banking</h1>
         <p>
@@ -13,12 +13,15 @@
         <img class="image" src="../../assets/images/image-mockups.png" alt="" />
       </div>
     </div>
+    <onboardingVue />
   </main>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
+import onboardingVue from "./reuseable/onboarding.vue";
 
 export default defineComponent({
+  components: { onboardingVue },
   setup() {
     return {};
   },
