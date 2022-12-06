@@ -7,6 +7,9 @@
   align-items: center;
   box-shadow: 0 8px 6px -6px #ccc;
   z-index: 9999;
+  position: fixed;
+  width: 100%;
+  background-color: var(--color-white);
 
   nav {
     ul {
