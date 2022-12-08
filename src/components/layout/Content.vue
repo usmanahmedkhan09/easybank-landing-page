@@ -10,7 +10,13 @@
         <button class="btn">Request invite</button>
       </div>
       <div class="icon_wrapper">
-        <img class="image" src="../../assets/images/image-mockups.png" alt="" />
+        <div>
+          <img
+            class="image"
+            src="../../assets/images/image-mockups.png"
+            alt=""
+          />
+        </div>
       </div>
     </div>
     <onboardingVue />

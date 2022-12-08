@@ -3,14 +3,14 @@
   background-color: var(--color-primary-blue);
   padding: 32px 92px 32px 92px;
   display: flex;
-  //   justify-content: space-between;
   align-items: space-between;
-  //   gap: 62px;
 
   .logo_wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    // justify-content: space-between;
     flex: 20%;
     .logo {
       path[role="svg"] {
@@ -19,6 +19,7 @@
     }
 
     .social-icons {
+      margin-top: 72px;
       svg:not(:first-child) {
         margin-left: 10px;
       }
