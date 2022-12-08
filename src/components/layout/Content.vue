@@ -10,17 +10,11 @@
         <button class="btn">Request invite</button>
       </div>
       <div class="icon_wrapper">
-        <div>
-          <img
-            class="image"
-            src="../../assets/images/image-mockups.png"
-            alt=""
-          />
-        </div>
+        <img class="image" src="../../assets/images/image-mockups.png" alt="" />
       </div>
     </div>
-    <onboardingVue />
-    <articlesVue />
+    <!-- <onboardingVue />
+    <articlesVue /> -->
   </main>
 </template>
 <script lang="ts">
