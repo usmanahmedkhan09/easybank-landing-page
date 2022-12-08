@@ -9,8 +9,14 @@
         </p>
         <button class="btn">Request invite</button>
       </div>
-      <div class="icon_wrapper">
-        <img class="image" src="../../assets/images/image-mockups.png" alt="" />
+      <div class="image__container">
+        <div class="image__container--wrapper">
+          <img
+            class="image"
+            src="../../assets/images/image-mockups.png"
+            alt=""
+          />
+        </div>
       </div>
     </div>
     <!-- <onboardingVue />

@@ -2,13 +2,13 @@
 
 .content {
   &--intro {
-    min-height: 65rem;
     display: flex;
     padding-left: 92px;
 
     @include respond-to("small") {
       flex-flow: column-reverse wrap;
       padding: unset;
+      min-height: 65rem;
     }
 
     .details {
@@ -18,10 +18,17 @@
       flex-flow: column wrap;
       justify-content: center;
       width: 30%;
+      margin-top: -13rem;
 
       @include respond-to("small") {
         text-align: center;
         align-items: center;
+        width: unset;
+        margin: unset;
+        padding: 0px 10px;
+      }
+
+      @include respond-to("medium") {
         width: unset;
       }
 
@@ -44,47 +51,37 @@
       }
     }
 
-    .icon_wrapper {
-      position: relative;
-      overflow-x: clip;
-      overflow-y: visible;
-      width: 70%;
-
+    .image__container {
       background-image: url("../images/bg-intro-desktop.svg");
       background: {
         repeat: no-repeat;
         size: cover;
       }
 
-      img {
-        max-width: 100%;
-        object-fit: cover;
-        position: absolute;
-        right: 0;
-        top: -10rem;
-        right: -13rem;
-
-        /****** Media Quries for Image ******/
-        @include respond-to("small") {
-          width: 100%;
+      &--wrapper {
+        img {
           height: 100%;
+          width: 100%;
           object-fit: cover;
-          transform: translateY(-7rem);
         }
 
-        @include respond-to("x-large") {
-          top: -7rem;
+        @include respond-to("small") {
+          transform: unset !important;
         }
-      }
 
-      /****** Media Quries for icon_wrapper ******/
-      @include respond-to("x-large") {
-        background-position: top -170px left 490px;
+        @include respond-to("medium") {
+          transform: translate(9rem, -2rem);
+        }
       }
 
       @include respond-to("small") {
         background-image: url("../images/bg-intro-mobile.svg");
-        width: unset;
+        background-position: unset !important;
+      }
+
+      @include respond-to("medium") {
+        overflow: hidden;
+        background-position: top -8rem right -24rem;
       }
     }
   }
