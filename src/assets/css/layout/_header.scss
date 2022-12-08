@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   z-index: 9999;
-  position: fixed;
+  // position: fixed;
   width: 100%;
   background-color: var(--color-white);
 
@@ -44,8 +44,10 @@
   }
 
   /****  media quires relted to mobiles **/
-  @include respond-to("small") {
-    padding: 24px 16px;
+  @include respond-to("medium") {
+    padding: 0px 24px;
+    max-height: unset;
+    height: 50px;
     .icon_wrapper {
       .icon {
         margin-top: 8px;

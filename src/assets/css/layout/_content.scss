@@ -18,7 +18,6 @@
       flex-flow: column wrap;
       justify-content: center;
       width: 30%;
-      margin-top: -13rem;
 
       @include respond-to("small") {
         text-align: center;
@@ -66,7 +65,7 @@
         }
 
         @include respond-to("small") {
-          transform: unset !important;
+          transform: translate(0rem, -8rem) !important;
         }
 
         @include respond-to("medium") {
