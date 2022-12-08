@@ -9,6 +9,9 @@ $breakpoints: (
   "large": (
     max-width: 1200px,
   ),
+  "x-large": (
+    min-width: 1600px,
+  ),
 );
 
 @mixin respond-to($breakpoint) {
