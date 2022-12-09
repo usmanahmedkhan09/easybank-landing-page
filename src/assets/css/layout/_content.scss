@@ -208,9 +208,8 @@
   }
 
   &--articles {
-    // padding: 24px;
     padding-top: 110px;
-    // padding-bottom: 110px;
+    padding-bottom: 110px;
     margin: 10px 0px;
 
     @include respond-to("small") {
@@ -265,7 +264,6 @@
 
         @include respond-to("large") {
           padding: unset;
-          // padding-right: 100px;
           min-width: unset;
         }
 
