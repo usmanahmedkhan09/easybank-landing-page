@@ -129,8 +129,6 @@
 
     @include respond-to("x-large") {
       padding-left: 92px;
-      height: 600px;
-      // text-align: left;
     }
 
     @include respond-to("medium") {
@@ -165,6 +163,7 @@
 
       @include respond-to("small") {
         justify-content: center;
+        gap: 16px;
       }
 
       @include respond-to("large") {
@@ -209,10 +208,21 @@
   }
 
   &--articles {
-    padding-left: 92px;
+    // padding: 24px;
     padding-top: 110px;
-    padding-bottom: 110px;
+    // padding-bottom: 110px;
     margin: 10px 0px;
+
+    @include respond-to("small") {
+      padding-left: unset;
+      text-align: center;
+    }
+
+    @include respond-to("large") {
+      padding-left: 92px;
+      text-align: left;
+    }
+
     .title {
       font-size: 3.2rem;
       line-height: 1.2;
@@ -224,14 +234,40 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding-right: 100px;
       margin-top: 64px;
       gap: 24px;
+
+      @include respond-to("small") {
+        padding-right: unset;
+        flex-direction: column;
+        padding: 24px;
+      }
+
+      @include respond-to("medium") {
+        flex-direction: row;
+      }
+
+      @include respond-to("large") {
+        padding: unset;
+        padding-right: 100px;
+        gap: 16px;
+      }
 
       .article {
         border-radius: 10px;
         flex: calc(100% / 4 - 24px);
         transition: box-shadow 0.3s ease-in-out;
+
+        @include respond-to("medium") {
+          flex-direction: row;
+          min-width: 300px;
+        }
+
+        @include respond-to("large") {
+          padding: unset;
+          // padding-right: 100px;
+          min-width: unset;
+        }
 
         &:hover {
           box-shadow: 0 1rem 2rem rgb(50 50 50 / 10%);
