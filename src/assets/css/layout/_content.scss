@@ -4,11 +4,11 @@
   &--intro {
     display: flex;
     padding-left: 92px;
+    max-height: 700px;
 
     @include respond-to("small") {
       flex-flow: column-reverse wrap;
       padding: unset;
-      min-height: 65rem;
     }
 
     @include respond-to("medium") {
@@ -123,9 +123,23 @@
 
   &--onboarding {
     background-color: var(--color-secondary-liteblue);
-    padding-left: 92px;
+    padding: 24px;
     padding-top: 110px;
-    height: 600px;
+    text-align: center;
+
+    @include respond-to("x-large") {
+      padding-left: 92px;
+      height: 600px;
+      // text-align: left;
+    }
+
+    @include respond-to("medium") {
+      text-align: center;
+    }
+
+    @include respond-to("large") {
+      text-align: left;
+    }
 
     .title {
       font-size: 3.2rem;
@@ -133,21 +147,55 @@
       font-weight: 300;
       margin-bottom: 24px;
     }
+
     .subtitle {
       color: var(--color-secondary-blue);
     }
 
     .options_wrapper {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      padding-right: 170px;
       margin-top: 64px;
 
+      @include respond-to("x-large") {
+        padding-right: 170px;
+      }
+
+      @include respond-to("small") {
+        justify-content: center;
+      }
+
+      @include respond-to("large") {
+        justify-content: space-between;
+      }
+
       .option {
-        flex: calc(100% / 4);
         max-width: 260px;
         height: 300px;
+        text-align: left;
+
+        @include respond-to("x-large") {
+          flex: calc(100% / 4);
+        }
+
+        @include respond-to("small") {
+          text-align: center;
+        }
+
+        @include respond-to("medium") {
+          text-align: left;
+        }
+
+        img {
+          margin: auto;
+
+          @include respond-to("medium") {
+            margin: unset;
+          }
+        }
+
         .title {
           font-size: 2rem;
           font-weight: 500;

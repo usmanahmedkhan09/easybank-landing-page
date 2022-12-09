@@ -1,6 +1,6 @@
 <template>
   <main class="content">
-    <div class="content--intro">
+    <!-- <div class="content--intro">
       <div class="details">
         <h1>Next generation digital banking</h1>
         <p>
@@ -18,9 +18,9 @@
           />
         </div>
       </div>
-    </div>
-    <!-- <onboardingVue />
-    <articlesVue /> -->
+    </div> -->
+    <onboardingVue />
+    <!-- <articlesVue /> -->
   </main>
 </template>
 <script lang="ts">
