@@ -3,17 +3,18 @@
 .footer {
   min-height: 200px;
   background-color: var(--color-primary-blue);
-  padding: 32px 92px 32px 92px;
   display: flex;
 
   @include respond-to("small") {
     flex-direction: column;
     align-items: center;
+    padding: 24px;
   }
 
-  @include respond-to("medium") {
+  @include respond-to("large") {
     flex-direction: row;
     align-items: space-between;
+    padding: 32px 92px 32px 92px;
   }
 
   .logo_wrapper {
@@ -35,7 +36,7 @@
         margin-bottom: 16px;
       }
 
-      @include respond-to("medium") {
+      @include respond-to("large") {
         margin-top: 72px;
         margin-bottom: unset;
       }
@@ -62,7 +63,7 @@
       margin: 0px;
     }
 
-    @include respond-to("medium") {
+    @include respond-to("large") {
       padding: initial;
     }
 
@@ -74,7 +75,7 @@
         margin: 0px 0px;
       }
 
-      @include respond-to("medium") {
+      @include respond-to("large") {
         margin: 10px 0px;
       }
 
@@ -94,9 +95,10 @@
 
     @include respond-to("small") {
       margin-top: 24px;
+      align-items: center;
     }
 
-    @include respond-to("medium") {
+    @include respond-to("large") {
       margin-top: unset;
     }
     .rights {
@@ -107,7 +109,7 @@
         margin: 16px auto;
       }
 
-      @include respond-to("medium") {
+      @include respond-to("large") {
         margin: 24px 0px;
       }
     }
