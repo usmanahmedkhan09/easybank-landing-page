@@ -11,6 +11,16 @@
       min-height: 65rem;
     }
 
+    @include respond-to("medium") {
+      flex-flow: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include respond-to("large") {
+      padding-left: 92px;
+    }
+
     .details {
       height: inherit;
       display: flex;
@@ -29,7 +39,16 @@
 
       @include respond-to("medium") {
         width: unset;
+        margin-top: unset;
+        text-align: left;
+        align-items: flex-start;
+        padding: 0px 16px;
+        margin-top: -2rem;
       }
+
+      // @include respond-to("x-large") {
+      //   margin-top: -30rem;
+      // }
 
       h1 {
         color: var(--color-primary-blue);
@@ -51,7 +70,6 @@
     }
 
     .image__container {
-      background-image: url("../images/bg-intro-desktop.svg");
       background: {
         repeat: no-repeat;
         size: cover;
@@ -65,22 +83,40 @@
         }
 
         @include respond-to("small") {
-          transform: translate(0rem, -8rem) !important;
+          transform: translate(0rem, -8rem);
         }
 
         @include respond-to("medium") {
           transform: translate(9rem, -2rem);
         }
+
+        @include respond-to("large") {
+          transform: translate(9rem, 0rem);
+        }
+
+        @include respond-to("x-large") {
+          transform: translate(13rem, -8rem);
+        }
       }
 
       @include respond-to("small") {
         background-image: url("../images/bg-intro-mobile.svg");
-        background-position: unset !important;
+        background-position: unset;
       }
 
       @include respond-to("medium") {
+        background-image: url("../images/bg-intro-desktop.svg");
         overflow: hidden;
         background-position: top -8rem right -24rem;
+      }
+
+      @include respond-to("large") {
+        overflow: hidden;
+        background-position: top -10rem right -27rem;
+      }
+
+      @include respond-to("x-large") {
+        background-position: top -18rem right -35rem;
       }
     }
   }
