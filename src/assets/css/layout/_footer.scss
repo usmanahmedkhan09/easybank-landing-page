@@ -5,11 +5,15 @@
   background-color: var(--color-primary-blue);
   padding: 32px 92px 32px 92px;
   display: flex;
-  align-items: space-between;
 
   @include respond-to("small") {
     flex-direction: column;
     align-items: center;
+  }
+
+  @include respond-to("medium") {
+    flex-direction: row;
+    align-items: space-between;
   }
 
   .logo_wrapper {
@@ -26,11 +30,14 @@
     }
 
     .social-icons {
-      margin-top: 72px;
-
       @include respond-to("small") {
         margin-top: 24px;
         margin-bottom: 16px;
+      }
+
+      @include respond-to("medium") {
+        margin-top: 72px;
+        margin-bottom: unset;
       }
 
       svg:not(:first-child) {
@@ -55,13 +62,20 @@
       margin: 0px;
     }
 
+    @include respond-to("medium") {
+      padding: initial;
+    }
+
     li {
       color: var(--color-gray);
       font-size: 1.6rem;
-      margin: 10px 0px;
 
       @include respond-to("small") {
         margin: 0px 0px;
+      }
+
+      @include respond-to("medium") {
+        margin: 10px 0px;
       }
 
       &:hover {
@@ -81,13 +95,20 @@
     @include respond-to("small") {
       margin-top: 24px;
     }
+
+    @include respond-to("medium") {
+      margin-top: unset;
+    }
     .rights {
-      margin: 24px 0px;
       color: var(--color-secondary-blue);
       font-size: 1.4rem;
 
       @include respond-to("small") {
         margin: 16px auto;
+      }
+
+      @include respond-to("medium") {
+        margin: 24px 0px;
       }
     }
   }
