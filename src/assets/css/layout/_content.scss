@@ -126,6 +126,7 @@
     background-color: var(--color-secondary-liteblue);
     padding: 24px;
     padding-top: 110px;
+    padding-bottom: 110px;
     text-align: center;
 
     @include respond-to("medium") {
