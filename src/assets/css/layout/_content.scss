@@ -128,16 +128,18 @@
     padding-top: 110px;
     text-align: center;
 
-    @include respond-to("x-large") {
-      padding-left: 92px;
-    }
-
     @include respond-to("medium") {
       text-align: center;
+      // margin-top: -15rem;
     }
 
     @include respond-to("large") {
       text-align: left;
+      padding-left: 92px;
+    }
+
+    @include respond-to("x-large") {
+      margin-top: -25rem;
     }
 
     .title {
@@ -154,12 +156,13 @@
     .options_wrapper {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
       align-items: center;
       margin-top: 64px;
+      // justify-content: center;
 
       @include respond-to("x-large") {
-        padding-right: 170px;
+        padding-right: 100px;
+        flex-wrap: unset;
       }
 
       @include respond-to("small") {
@@ -167,7 +170,7 @@
         gap: 16px;
       }
 
-      @include respond-to("large") {
+      @include respond-to("medium") {
         justify-content: space-between;
       }
 
@@ -186,6 +189,8 @@
 
         @include respond-to("medium") {
           text-align: left;
+          // flex: calc(100% / 2);
+          max-width: calc(100% - 16px);
         }
 
         img {

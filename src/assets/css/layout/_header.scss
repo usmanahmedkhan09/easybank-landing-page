@@ -1,7 +1,5 @@
 @use "../base/" as *;
 .header {
-  padding: 30px 92px;
-  max-height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,8 +7,20 @@
   position: fixed;
   width: 100%;
   background-color: var(--color-white);
+  padding: 0px 24px;
+  height: 45px;
+
+  @include respond-to("large") {
+    padding: 30px 92px;
+    max-height: 40px;
+  }
 
   nav {
+    display: none;
+    @include respond-to("large") {
+      display: block;
+    }
+
     ul {
       display: flex;
       align-items: center;
@@ -40,28 +50,26 @@
   }
 
   .menuIcon {
-    display: none;
+    display: block;
+    @include respond-to("large") {
+      display: none;
+    }
   }
 
-  /****  media quires relted to mobiles **/
-  @include respond-to("small") {
-    padding: 0px 24px;
-    max-height: unset;
-    height: 50px;
-    .icon_wrapper {
-      .icon {
+  button {
+    display: none;
+    @include respond-to("large") {
+      display: block;
+      min-height: 45px;
+      padding: unset;
+    }
+  }
+
+  .icon_wrapper {
+    .icon {
+      @include respond-to("medium") {
         margin-top: 8px;
       }
-    }
-    nav {
-      display: none;
-    }
-    button {
-      display: none;
-    }
-    .menuIcon {
-      display: block;
-      align-self: center;
     }
   }
 }
